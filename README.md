@@ -2,7 +2,7 @@ GWHEMS is a Home Energy Management System, targeting a SMA PV-plant with a Sunny
 Energy flow based on dynamic-energy-tariffs from Tibber.
 
 Supported Devices:
-1. Home Storege (9.8 kWh)
+1. Home Storage (9.8 kWh)
 2. EV Charger
 3. Nefit Heatpump
 4. Edimax wallpluggs
