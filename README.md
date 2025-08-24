@@ -10,10 +10,10 @@ Supported Devices:
 6. Edimax wallpluggs
 
 Suported Functions:
-1. Dynamic tariffs (Tibber, EPEX spot market)
+1. Dynamic tariffs (Tibber, EPEX spot market, quaterly-hours prepared)
 2. Delayed Home Storage charging
 3. Buying/Selling (based on energy pricing)
 4. Heatpump DHW (based on energy pricing)
 5. EVCharger fast or Surplus charging
-6. Plant Zero Export (period depending, EVCharger not supported WIP)
+6. Plant Zero Export (period depending, EVCharger is now supported)
 7. Battery charging (negative prices period depending)
