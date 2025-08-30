@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Platforms>AnyCPU;ARM64;x64</Platforms>
+    <StartupObject>gwHEMS.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\gwEdimax\gwEdimax.csproj" />
+    <ProjectReference Include="..\gwEmail\gwEmail.csproj" />
+    <ProjectReference Include="..\gWEnviline\gwEnviline.csproj" />
+    <ProjectReference Include="..\gwEVCharger\gwEVCharger.csproj" />
+    <ProjectReference Include="..\GWLogging\gwLogging.csproj" />
+    <ProjectReference Include="..\gwModbus\gwModbus.csproj" />
+    <ProjectReference Include="..\gwTibber\gwTibber.csproj" />
+  </ItemGroup>
+</Project>

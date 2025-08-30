@@ -1,0 +1,66 @@
+0:
+publish (Visual Studio)
+Tools -> Command Line -> Developer command prompt
+dotnet publish --runtime linux-arm64
+
+
+1:
+Install Pi os 64bit
+
+2:
+Install .Net 8.0
+https://www.petecodes.co.uk/install-and-use-microsoft-dot-net-8-with-the-raspberry-pi/
+wget -O - https://raw.githubusercontent.com/pjgpetecodes/dotnet8pi/main/install.sh | sudo bash
+
+3:
+Start raspberryPi
+Install latest update
+
+4:
+sudo raspi-config
+Advanced Options -> Wayland  select -> X11
+Menu Preferences -> Raspberry Pi Config
+Localisation -> Set Locale -> Amsterdam
+
+
+5:
+sudo nano /etc/xdg/autostart/myapp.desktop      -> Global
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart  -> Per user (Working)
+
+6:
+Copy content-below in the opened autostart
+Terminal Server: (Single file .Net app)
+ 
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@lxterminal --command "/home/pi/EcoHome/TestLinux"
+@xscreensaver -no-splash
+
+
+https://commandmasters.com/commands/lxterminal-linux/
+
+7: Alternative
+Terminal Server: (Multi file .Net app)
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@lxterminal -e /home/pi/EcoHome/EcoHome-Updater /home/pi/EcoHome/EcoHome.cfg
+@xscreensaver -no-splash
+
+echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
+source ~/.bashrc
+
+
+Reboot
+-
+==========================================================
+
+Add the execution permission to a script:
+sudo chmod +x /etc/init.d/myservice
+
+
+WCF:
+https://devblogs.microsoft.com/dotnet/corewcf-v1-released/
